@@ -1,6 +1,6 @@
 <?php
 // ポストかゲットか条件分岐をする。
-if(){
+if(isset($_POST['account']) && isset($_POST['password'])){
 	require_once('config.php');
 
 	session_start();
