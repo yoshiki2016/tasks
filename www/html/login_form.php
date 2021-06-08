@@ -24,7 +24,8 @@ if(isset($_POST['account_id']) && isset($_POST['password'])){
 	if (password_verify($_POST['password'], $row['password'])) {
 	  session_regenerate_id(true); //session_idを新しく生成し、置き換える
 	  $_SESSION['ACCOUNT_id'] = $row['account_id'];
-	  require('./top.php');
+		$url = DOMAIN . 'top.php';
+		header('Location: '. $url); 
 	} else {
 	  echo 'アカウント又はパスワードが間違っています。';
 	  return false;

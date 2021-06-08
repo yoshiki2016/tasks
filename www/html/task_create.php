@@ -9,10 +9,10 @@ if(isset($_POST['task_name'])){
 			id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 			task_type_id VARCHAR(255), 
 			account_id VARCHAR(255),
-			task_name VARCHAR(30),
-			worker_name VARCHAR(30),
+			task_name VARCHAR(30) character set utf8,
+			worker_name VARCHAR(30) character set utf8,
 			deadline date,
-			memo VARCHAR(100),
+			memo VARCHAR(100) character set utf8,
 			created timestamp not null default current_timestamp);"
 	);
 	} catch (Exception $e) {
